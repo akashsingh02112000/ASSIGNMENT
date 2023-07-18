@@ -1,0 +1,125 @@
+Q.1 What’s Constructor And Its Purpose?
+In object-oriented programming, a constructor is a special method that is used to initialize and set up an object when it is created from a class. It is called automatically when an object is instantiated and provides an opportunity to initialize the object's properties and perform any necessary setup tasks.
+
+The purpose of a constructor is to ensure that the object being created starts in a valid and consistent state by initializing its member variables or properties. It allows you to specify initial values for the object's properties, perform any necessary validations or calculations, and set up any required resources or dependencies.
+
+
+
+Q.2 Explain This Keyword and Its Purpose?
+The "this" keyword is a special reference in programming languages like JavaScript and Java that is used to refer to the current instance of a class or object. Its purpose is to access or refer to the current object's properties, methods, or constructors within its own scope.
+
+The key points about the "this" keyword are as follows:
+
+1. Reference to the Current Object: "this" acts as a reference to the instance of the class or object on which a method or constructor is being invoked. It allows access to the object's properties and methods from within its own scope.
+
+2. Differentiation of Local and Instance Variables: When a class has both local variables (defined within a method) and instance variables (defined within the class but outside any specific method), the "this" keyword is used to differentiate between them. It refers to the instance variable rather than the local variable if they have the same name.
+
+3. Method Chaining: The "this" keyword is commonly used in method chaining, where multiple methods are called in sequence on the same object. Each method returns the object itself (using "return this;"), allowing subsequent methods to be called on the same object in a fluent manner.
+
+4. Constructor Invocation: In constructors, "this" is used to refer to the current object being created. It is often used to set initial values of instance variables or to invoke other constructors within the same class using different parameter sets.
+
+5. Event Handling: In event-driven programming, such as in JavaScript for web development, the "this" keyword is frequently used in event handlers to refer to the object that triggered the event. It allows access to the properties and methods of the object within the event handler function.
+
+6. Dynamic Context: The value of "this" can change dynamically depending on how a function or method is called. It is determined by the way a function is invoked, such as through object.method() syntax or using call(), apply(), or bind() methods to explicitly set the context.
+
+Overall, the "this" keyword is used to refer to the current object within its own scope and enables access to its properties, methods, and constructors. It helps in maintaining proper context, differentiating between local and instance variables, and facilitating various programming patterns such as method chaining and event handling.
+
+
+
+
+Q.3 What’s Call Apply Bind Method & Difference Between them
+In JavaScript, the `call`, `apply`, and `bind` methods are used to manipulate the context (the value of `this`) and parameter passing in function calls. While they serve similar purposes, there are differences in how they are used and how arguments are passed to the target function.
+
+1. `call` method:
+   - Syntax: `function.call(thisArg, arg1, arg2, ...)`
+   - The `call` method invokes a function with a specified context (`thisArg`) and a variable number of arguments (arg1, arg2, ...).
+   - It allows you to explicitly set the value of `this` inside the function being called.
+   - Arguments are passed individually, separated by commas.
+   - Example: `myFunction.call(obj, arg1, arg2)`
+
+2. `apply` method:
+   - Syntax: `function.apply(thisArg, [argsArray])`
+   - The `apply` method is similar to `call`, but the arguments are passed as an array-like object (`argsArray`).
+   - It allows you to explicitly set the value of `this` inside the function being called.
+   - Arguments are passed as an array or array-like object.
+   - Example: `myFunction.apply(obj, [arg1, arg2])`
+
+3. `bind` method:
+   - Syntax: `function.bind(thisArg[, arg1[, arg2[, ...]]])`
+   - The `bind` method creates a new function that, when called, has a specified context (`thisArg`) and optional additional arguments (`arg1`, `arg2`, ...).
+   - It returns a new function with the specified `this` value permanently bound, regardless of how the function is later invoked.
+   - Arguments are partially applied to the new function. You can pass them during the bind call or when the new function is invoked.
+   - Example: `var newFunction = myFunction.bind(obj, arg1, arg2)`
+
+Key differences:
+- `call` and `apply` are used to immediately invoke the target function, while `bind` returns a new function with the bound context and arguments.
+- `call` accepts arguments individually, while `apply` accepts an array-like object as its second argument.
+- `bind` allows for partial application of arguments by creating a new function with pre-set values for some of the arguments.
+
+ `call` and `apply` are used to invoke a function with a specified context and arguments, while `bind` is used to create a new function with a permanently bound context and optionally pre-set arguments. These methods provide flexibility in manipulating the context and parameter passing when calling functions in JavaScript.
+
+
+
+
+
+Q.4 Explain OOPS ? 
+OOPS stands for Object-Oriented Programming (OOP). It is a programming paradigm that focuses on organizing code into reusable objects that interact with each other. OOP is based on the principles of encapsulation, inheritance, polymorphism, and abstraction. Here's an explanation of these key concepts:
+
+1. Encapsulation: Encapsulation is the process of bundling data (properties) and the operations (methods) that manipulate that data into a single unit called an object. It allows for data hiding, where the internal details and implementation of an object are concealed from outside access. The object exposes a public interface to interact with its data, ensuring better security and maintainability.
+
+2. Inheritance: Inheritance enables objects to inherit properties and behaviors from other objects. It establishes an "is-a" relationship between classes, where a subclass (child) can inherit the characteristics of a superclass (parent). Inheritance promotes code reuse, as subclasses can inherit and extend the functionality of the superclass, while adding or overriding specific features.
+
+3. Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common parent class. It means that objects can take on multiple forms or respond differently to the same method depending on their specific class. Polymorphism helps in writing flexible and extensible code by allowing methods to be written generically and overridden in specific subclasses.
+
+4. Abstraction: Abstraction focuses on creating simplified models of real-world entities by capturing their essential characteristics. It involves hiding unnecessary details and complexities, and providing a high-level view of an object's functionality. Abstraction allows developers to build complex systems by breaking them down into manageable and understandable modules, promoting code reusability and maintainability.
+
+Other supporting principles in OOP include:
+
+- Modularity: OOP promotes modularity, where a program is divided into smaller, self-contained modules or classes. Each class represents a specific functionality or object, making the code more organized and easier to manage.
+- Encapsulation: Encapsulation ensures that the internal state of an object is accessible only through defined methods. It helps maintain data integrity and provides controlled access to an object's properties.
+- Association: Association represents relationships between objects, where one object uses or interacts with another object. It can be a one-to-one, one-to-many, or many-to-many relationship, facilitating the creation of complex systems through collaboration between objects.
+- Composition: Composition is a strong form of association where objects are composed of other objects. It represents a "has-a" relationship, where an object contains other objects as its parts. Composition allows for building complex objects by combining simpler objects.
+
+OOP provides a powerful and modular approach to software development, offering benefits such as code reusability, maintainability, and scalability. It promotes a structured and organized way of building applications by modeling real-world entities into objects and defining their behaviors and relationships.
+
+
+
+
+
+Q.5 Whats Abstraction and Its Purpose?
+Abstraction is a fundamental concept in object-oriented programming (OOP) that involves creating simplified models of real-world entities by capturing their essential characteristics and hiding unnecessary details. It focuses on representing the essential features and behaviors of an object, while abstracting away the complexities and inner workings.
+
+The purpose of abstraction is to simplify the complexity of a system or object by providing a high-level view or interface that allows users to interact with the object without needing to understand its internal implementation. Here are some key purposes and benefits of abstraction:
+
+
+
+Q.6 Whats Polymorphism and Purpose of it?
+Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common parent class. It means that objects can take on multiple forms or respond differently to the same method depending on their specific class. Polymorphism helps in writing flexible and extensible code by allowing methods to be written generically and overridden in specific subclasses.
+
+
+
+
+Q.7  Whats Inheritance and Purpose of it?
+Inheritance: Inheritance enables objects to inherit properties and behaviors from other objects. It establishes an "is-a" relationship between classes, where a subclass (child) can inherit the characteristics of a superclass (parent). Inheritance promotes code reuse, as subclasses can inherit and extend the functionality of the superclass, while adding or overriding specific features.
+
+
+
+Q.8 Whats Encapsulation and Purpose of it ?
+Encapsulation: Encapsulation is the process of bundling data (properties) and the operations (methods) that manipulate that data into a single unit called an object. It allows for data hiding, where the internal details and implementation of an object are concealed from outside access. The object exposes a public interface to interact with its data, ensuring better security and maintainability.
+
+
+
+
+Q.9 Explain Class in JavaScript?
+In JavaScript, a class is a syntactical construct that allows for creating objects based on a blueprint or template. It provides a way to define a set of properties and methods that objects of that class will possess. Classes in JavaScript are introduced in ECMAScript 2015 (ES6) and are a part of the object-oriented programming (OOP) paradigm.
+
+
+
+Q.10 What’s Super Keyword & What it does?
+In JavaScript, the super keyword is used to call functions or access properties on an object's parent or superclass. It is commonly used within a subclass or derived class to invoke the constructor or methods of its parent class. The super keyword provides a way to access and utilize the functionality defined in the parent class.
+
+Here are the main uses and functionalities of the super keyword:
+
+Calling the Parent Class Constructor:
+
+In a subclass, the super keyword can be used in the constructor to invoke the constructor of the parent class. This allows the subclass to inherit and initialize the properties defined in the parent class.
