@@ -1,0 +1,118 @@
+Q.1  Whats React and its pros and cons?
+React is a popular JavaScript library for building user interfaces. It provides a declarative and component-based approach to building UIs, making it easier to develop and maintain complex applications.
+
+Pros of React:
+
+1-->Component-Based Architecture: React encourages the development of reusable UI components, allowing for modular and maintainable code. Components can be easily composed and nested, leading to better code organization and reusability.
+
+2-->Virtual DOM: React uses a virtual DOM (a lightweight copy of the actual DOM) to optimize rendering performance. By comparing the virtual DOM with the real DOM, React efficiently updates only the necessary parts of the UI, resulting in faster rendering and a smoother user experience.
+
+3-->Declarative Syntax: React uses a declarative syntax, where you define how the UI should look based on the current application state. This allows developers to focus on describing the desired UI, rather than manually manipulating the DOM or worrying about low-level implementation details.
+
+4-->One-Way Data Flow: React follows a one-way data flow, making it easier to understand and debug the flow of data within an application. Data flows from parent components to child components through props, resulting in a predictable and easier-to-maintain codebase.
+
+Rich Ecosystem and Community: React has a vibrant ecosystem with a vast collection of third-party libraries, tools, and community support. This makes it easier to find solutions, reusable components, and resources for building React applications.
+
+Cons of React:
+
+1--> Learning Curve: React has a learning curve, especially for developers new to JavaScript frameworks or libraries. It introduces concepts like JSX, component lifecycle methods, and state management patterns that may require time to grasp and become proficient in.
+
+2--> Boilerplate Code: React, being a library rather than a full-fledged framework, requires additional libraries or patterns for features like routing, state management, and form handling. Setting up and configuring these libraries can introduce some boilerplate code.
+
+3--> JSX Complexity: JSX, which combines JavaScript and HTML syntax, may initially be unfamiliar to developers who are more comfortable with traditional HTML templates. Understanding JSX and its intricacies can take some time for developers to adapt to.
+
+
+
+
+Q.2 What do you understand by Virtual Dom?
+The Virtual DOM (VDOM) is a concept and technique used by React and other JavaScript frameworks to optimize the performance of web applications. It is an abstraction of the real DOM (Document Object Model) and acts as a lightweight copy of the actual DOM.
+he Virtual DOM is a key optimization technique used by React to improve the performance of web applications. By using a lightweight copy of the DOM and efficiently applying updates, React minimizes unnecessary re-renders, optimizes the rendering process, and provides a smoother user experience.
+
+
+
+
+Q.3 Difference between Virtual Dom vs Real Dom?
+Real DOM vs. Virtual DOM:
+The real DOM is a tree-like structure that represents the HTML elements of a web page. It provides an interface for interacting with and manipulating the web page's content. However, accessing and modifying the real DOM can be expensive in terms of performance, especially for large and complex applications.
+The virtual DOM, on the other hand, is a representation of the real DOM in JavaScript. It is a lightweight and in-memory data structure that reflects the state of the UI components. The virtual DOM is faster to work with and allows for efficient updates and comparisons.
+
+
+
+
+Q.4 Whats component? Types of component?
+In the context of technology and engineering, a component refers to a distinct part or element that contributes to the functioning of a larger system or device. Components are often combined or connected together to create more complex systems.
+
+There are various types of components based on the field or system they are used in. Here are some common types of components:
+
+1. Electronic Components: These are used in electronic circuits and devices. Some examples include resistors, capacitors, transistors, diodes, integrated circuits (ICs), microcontrollers, and sensors.
+
+2. Mechanical Components: These are physical parts that contribute to the mechanical functioning of a system. Examples include gears, bearings, belts, screws, springs, and motors.
+
+3. Electrical Components: These are used in electrical systems to control or distribute electrical power. Examples include switches, relays, transformers, circuit breakers, fuses, and connectors.
+
+4. Computer Components: These are the building blocks of computer systems. Examples include central processing units (CPUs), memory modules, graphics cards, hard drives, motherboards, and power supplies.
+
+5. Optical Components: These components manipulate or control the properties of light in optical systems. Examples include lenses, mirrors, prisms, optical fibers, filters, and lasers.
+
+6. Fluid Components: These components are used in fluid systems, such as hydraulic or pneumatic systems. Examples include valves, pumps, cylinders, pipes, and filters.
+
+7. Structural Components: These components provide support and structural integrity to various systems. Examples include beams, columns, frames, trusses, and foundations.
+
+8. Software Components: These are modular units of software that can be combined to create larger applications or systems. Examples include libraries, modules, classes, functions, and APIs.
+
+These are just a few examples, and there are many more types of components depending on the specific field or system being considered.
+
+
+
+
+
+
+Q.5 Difference between class & function based component?
+In the context of programming, the terms "class-based component" and "function-based component" are commonly used in frameworks such as React, Angular, or Vue.js to describe different approaches to building user interface components. Here are the main differences between the two:
+
+1. Syntax and Structure:
+   - Class-based components: These components are defined as JavaScript classes. They extend a base class provided by the framework (e.g., React.Component in React) and use class inheritance and the lifecycle methods (such as render(), componentDidMount(), etc.) to define the component's behavior.
+   - Function-based components: These components are defined as JavaScript functions. They receive input data as "props" and return the JSX (JavaScript XML) that defines the component's rendering. They don't have lifecycle methods by default, but can use React hooks (e.g., useEffect(), useState()) to manage state and perform side effects.
+
+2. Complexity and Boilerplate:
+   - Class-based components: These components often require more code and can be more verbose, especially when dealing with complex component hierarchies or state management. They may involve defining a constructor, using this.state to manage component state, and binding methods explicitly.
+   - Function-based components: These components are generally considered simpler and more concise. With the introduction of React hooks, they can handle state and side effects without relying on class-based syntax. Hooks like useState and useEffect provide a cleaner way to manage state and lifecycle behavior.
+
+3. State Management:
+   - Class-based components: They have built-in support for managing state using this.state and this.setState(). State changes trigger a re-render of the component and its child components.
+   - Function-based components: Prior to React hooks, function-based components didn't have built-in state management. However, with hooks like useState, they can now handle component-level state just like class-based components.
+
+4. Performance:
+   - Class-based components: Due to the overhead of class instantiation and method bindings, class-based components may have a slight performance disadvantage compared to function-based components.
+   - Function-based components: With the introduction of React hooks, function-based components can achieve similar performance to class-based components while maintaining simplicity.
+
+It's important to note that the specific framework being used may have its own conventions and optimizations for class-based and function-based components. The choice between the two often depends on the requirements of the project, the familiarity of the development team, and the ecosystem and guidelines provided by the framework itself.
+
+
+  # Q.6 Explain react component life cycle 
+The React component lifecycle refers to a series of events or methods that are automatically called at different stages of a component's existence. These methods allow you to control and manipulate the behavior of the component at various points in its lifecycle. In React, the component lifecycle is divided into three main phases: Mounting, Updating, and Unmounting.
+It's worth noting that with the release of React 17, some lifecycle methods like componentWillMount, componentWillReceiveProps, and componentWillUpdate have been deprecated due to potential confusion and misuse. It is recommended to use the lifecycle methods mentioned above and React Hooks for managing component lifecycle and state.
+
+
+
+Q.7 Explain Prop Drilling in React & Ways to avoid it?
+ANS=
+
+Prop drilling in React refers to the process of passing props through multiple intermediate components in order to reach a deeply nested component that actually needs the prop. This can occur when a component needs to pass data to a child component, but there are several layers of components in between that do not require the data themselves.
+
+Prop drilling can lead to code complexity, reduced maintainability, and increased coupling between components. However, there are ways to avoid prop drilling and make data passing more efficient and straightforward. Here are a few approaches:
+
+1. Use Context API: React's Context API allows you to create a context object that can be accessed by any component within its provider hierarchy. By placing the data in a context provider higher up in the component tree, you can access it directly in the deeply nested components without passing it through intermediate components. This eliminates the need for prop drilling.
+
+2. Implement Redux or other State Management Libraries: State management libraries like Redux provide a global state store that can be accessed from any component within the application. By storing the data in the global state, you can easily access it in any component without the need for prop drilling.
+
+3. Utilize React Router's useParams or useLocation: If the data you need to pass is related to routing, you can use React Router's useParams or useLocation hooks to access URL parameters or query strings directly in the component that needs them. This avoids the need to pass the data through intermediate components.
+
+4. Use React Hooks: With the introduction of React Hooks, you can utilize the useState or useReducer hooks to manage local state within a component. Instead of drilling props through intermediate components, you can lift the state up to a common parent component and then pass down the state and any necessary callback functions as props to the child components that need them.
+
+5. Component Composition: Instead of passing props through multiple layers of components, consider composing smaller, reusable components that encapsulate related functionality. This allows you to pass props directly to the relevant child components, reducing the need for prop drilling.
+
+6. Higher-Order Components (HOC) or Render Props: HOCs or render props can be used to wrap components and provide them with the necessary data without prop drilling. These patterns enable components to access the required data via props injected by the HOC or through a render prop function.
+
+By applying these techniques, you can avoid prop drilling and create more maintainable, decoupled, and efficient React components. The choice of approach depends on the complexity of your application, the specific use case, and the preference of your development team.
+
