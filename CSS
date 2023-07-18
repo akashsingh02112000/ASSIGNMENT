@@ -1,0 +1,55 @@
+Q.1 What’s Box Model in CSS ? 
+  ANS=In CSS, the term "box model" is used when talking about design and layout.The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content
+      Content - The content of the box, where text and images appear
+      Padding - Clears an area around the content. The padding is transparent
+      Border - A border that goes around the padding and content
+      Margin - Clears an area outside the border. The margin is transparent
+      The box model allows us to add a border around elements, and to define space between elements.
+
+  
+Q.2  What are the Different Types of Selectors in CSS & what are the advantages of them?
+  ANS=CSS selectors are used to "find" (or select) the HTML elements you want to style.
+  We can divide CSS selectors into five categories:
+   Simple selectors (select elements based on name, id, class)
+  Combinator selectors (select elements based on a specific relationship between them)
+   Pseudo-class selectors (select elements based on a certain state)
+   Pseudo-elements selectors (select and style a part of an element)
+    Attribute selectors (select elements based on an attribute or attribute value)
+
+Q.3 What is VW/VH ?
+ANS= vw and vh are a percentage of the window width and height, respectively: 100vw is 100% of the width, 80vw is 80%.
+
+
+Q.4 Whats difference between Inline, Inline Block and block ?
+ANS=inline The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height.
+    inline-block It’s formatted just like the inline element, where it doesn’t start on a new line. BUT, you can set width and height values.
+     block The element will start on a new line and occupy the full width available. And you can set width and height values.
+
+
+Q.5 How is Border-box different from Content Box?
+ANS=content-box: This is the default value of box-sizing. The dimension of element only includes ‘height’ and ‘width’ and does not include ‘border’ and ‘padding’ given to element. Padding and Border take space outside the element.
+    border-box: In this value, not only width and height properties are included but you will find padding and border inside of the box for example .box {width: 200px; border: 10px solid black;} renders a box that is 200px wide.
+
+  Q.6 What’s z-index and How does it Function ?
+  ANS= z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+       Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top. 
+
+  Q.7 What’s Grid & Flex and difference between them?
+  ANS=1. Dimensionality and Flexibility:
+      Flexbox offers greater control over alignment and space distribution between items. Being one-dimensional, Flexbox only deals with either columns or rows.
+      Grid has two-dimension layout capabilities which allow flexible widths as a unit of length. This compensates for the limitations in Flex.
+2. Alignment:
+      Flex Direction allows developers to align elements vertically or horizontally, which is used when developers create and reverse rows or columns.
+     CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
+3. Item Management
+     Flex Container is the parent element while Flex Item represents the children. The Flex Container can ensure balanced representation by adjusting item dimensions. This allows developers to design for fluctuating screen sizes.
+      Grid supports both implicit and explicit content placement. Its inbuilt automation allows it to automatically extend line items and copy values into the new creation from the preceding item.
+
+Q.8 Difference between absolute and relative and sticky and fixed position explain with example.
+ANS=The position property in CSS tells about the method of positioning for an element or an HTML entity and the positioning of an element can be done using the top, right, bottom, and left properties. These specify the distance of an HTML element from the edge of the viewport. 
+There are five different types of position property available in CSS:
+Fixed position: Any HTML element with position: fixed property will be positioned relative to the viewport. An element with fixed positioning allows it to remain in the same position even we scroll the page. We can set the position of the element using the top, right, bottom, and left.
+Static: This method of positioning is set by default. If we don’t mention the method of positioning for any element, the element has the position: static method by default. By defining Static, the top, right, bottom, and left will not have any control over the element. The element will be positioned with the normal flow of the page.
+Relative: An element with position: relative is positioned relatively with the other elements which are sitting on top of it. If we set its top, right, bottom, or left, other elements will not fill up the gap left by this element. An element with its position set to relative and when adjusted using top, bottom, left, and right will be positioned relative to its original position.
+Absolute: An element with position: absolute will be positioned with respect to its nearest Non-static ancestor. The positioning of this element does not depend upon its siblings or the elements which are at the same level.
+Sticky: Element with position: sticky and top:0 played a role between fixed & relative based on the position where it is placed. If the element is placed in the middle of the document then when the user scrolls the document, the sticky element start scrolling until it touched the top. When it touches the top, it will be fixed at the top place in spite of further scrolling. 
